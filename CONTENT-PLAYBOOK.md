@@ -74,7 +74,6 @@ can produce a consistent post from it.
 
 ## Topic backlog (rough priority order)
 
-- Best security awareness training platforms (KnowBe4 vs. Curricula vs. free alternatives)
 - Best encrypted file-sharing/cloud storage for sensitive documents (Tresorit vs. Sync.com vs. standard Google Drive/OneDrive)
 - Best single sign-on (SSO) providers for small business (Okta vs. JumpCloud vs. Google/Microsoft native SSO)
 - Best business-grade firewall/router hardware for a small office

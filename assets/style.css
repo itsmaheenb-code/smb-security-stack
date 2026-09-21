@@ -339,6 +339,7 @@ tbody tr:hover { background: #fdfaf5; }
 .tag-endpoint { background: var(--accent-soft); color: var(--accent-dark); }
 .tag-mfa { background: #fdf0d8; color: #9a6b0a; }
 .tag-email { background: var(--blue-soft); color: var(--blue); }
+.tag-training { background: #e4f3e0; color: #2f7a3d; }
 
 .post-card .post-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
