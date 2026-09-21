@@ -14,10 +14,26 @@ can produce a consistent post from it.
    numbers from an old post without reverifying; SaaS pricing and even product
    names change often (e.g. Perimeter 81 → Check Point Harmony SASE).
 3. **Write the post** using `posts/best-password-manager-for-small-business.html`
-   as the template: same header/footer, same `.disclosure-note` block near the
-   top, a comparison table, one `<h2>` per tool with an honest paragraph, one
-   closing "which one should you pick" section addressed to different reader
-   situations (team size, budget, technical sophistication).
+   as the template — copy its exact structure, don't improvise a new one:
+   - Header includes the logo badge: `<span class="logo-badge">S</span>The SMB Security Stack`.
+   - Right after `<main>`, a `<span class="post-tag tag-X">Category</span>` —
+     reuse an existing tag class (`tag-password`, `tag-vpn`, `tag-backup`,
+     `tag-endpoint`, `tag-mfa`) if the topic fits one, or add a new
+     `.tag-newcategory` rule to `assets/style.css` (pick an unused accent
+     color already defined as a CSS variable) if it doesn't.
+   - Comparison table, then one `<div class="tool-card"><h2>...</h2><span
+     class="price-chip">...</span><p>...</p><a class="cta" href="..."
+     rel="nofollow sponsored"><!-- AFF:x -->...</a></div>` per tool. Use
+     `class="cta"` only on the affiliate-pending link; use `class="plain-link"`
+     for a tool with no affiliate program.
+   - A closing `<div class="verdict-box"><h2>Which one should you pick?</h2>
+     <p>...</p></div>` addressed to different reader situations (team size,
+     budget, technical sophistication).
+   - FAQ as `<details class="faq-item"><summary>Question?</summary><p
+     class="faq-answer">Answer.</p></details>` — not plain `<h3>`/`<p>`, and
+     not `<summary>` styling changes; the CSS already handles the accordion look.
+   - Update `index.html`'s card grid using the same `.post-card`/`.post-tag`
+     pattern as the existing entries, matching the tag color you used on the post.
 4. **Never claim hands-on testing that didn't happen.** Write from public
    information — pricing, features, platform support — framed as comparison,
    not as "I tested this for 3 months." This is both an honesty issue and a

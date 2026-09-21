@@ -65,7 +65,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="site-title" href="../index.html">The SMB Security Stack</a>
+    <a class="site-title" href="../index.html"><span class="logo-badge">S</span>The SMB Security Stack</a>
     <nav class="site-nav">
       <a href="../about.html">About</a>
       <a href="../disclosure.html">Disclosure</a>
@@ -74,8 +74,9 @@
 </header>
 
 <main>
+  <span class="post-tag tag-mfa">MFA / 2FA</span>
   <h1>Best MFA/2FA Solutions for Small Teams (2026)</h1>
-  <p class="byline">By The SMB Security Stack Editorial Team &middot; Last updated <time datetime="2026-09-21">September 21, 2026</time> &middot; Software comparison</p>
+  <p class="byline">By The SMB Security Stack Editorial Team &middot; Last updated <time datetime="2026-09-21">September 21, 2026</time></p>
 
   <div class="disclosure-note">
     This post contains affiliate links. If you sign up through one, we may earn a
@@ -119,93 +120,113 @@
     </tr>
   </table>
 
-  <h2>Free authenticator apps</h2>
-  <p>
-    For a very small team, Google Authenticator or Microsoft Authenticator
-    costs nothing and covers the core benefit of MFA: a password alone is no
-    longer enough to log in. What you give up is centralized administration —
-    there's no dashboard to see who has MFA enabled, enforce it, or revoke
-    access remotely.
-  </p>
+  <div class="tool-card">
+    <h2>Free authenticator apps</h2>
+    <span class="price-chip">Free</span>
+    <p>
+      For a very small team, Google Authenticator or Microsoft Authenticator
+      costs nothing and covers the core benefit of MFA: a password alone is no
+      longer enough to log in. What you give up is centralized administration —
+      there's no dashboard to see who has MFA enabled, enforce it, or revoke
+      access remotely.
+    </p>
+  </div>
 
-  <h2>Cisco Duo</h2>
-  <p>
-    Duo is built to work across a mixed environment — it doesn't require
-    standardizing on one identity provider — and adds device posture checks
-    (is this device up to date and secure?), a verified push option, and
-    anomaly detection on top of basic MFA. It's a strong choice once you want
-    admin visibility without being locked into Microsoft's identity stack.
-  </p>
-  <p>
+  <div class="tool-card">
+    <h2>Cisco Duo</h2>
+    <span class="price-chip">~$6&ndash;9/user/month</span>
+    <p>
+      Duo is built to work across a mixed environment — it doesn't require
+      standardizing on one identity provider — and adds device posture checks
+      (is this device up to date and secure?), a verified push option, and
+      anomaly detection on top of basic MFA. It's a strong choice once you want
+      admin visibility without being locked into Microsoft's identity stack.
+    </p>
     <a class="cta" href="https://duo.com/" rel="nofollow sponsored"><!-- AFF:duo -->Check Cisco Duo pricing</a>
-  </p>
+  </div>
 
-  <h2>Microsoft Entra MFA</h2>
-  <p>
-    If your team already runs on Microsoft 365, Entra MFA (formerly Azure AD
-    MFA) is usually the path of least resistance — Entra ID P1 is included in
-    Microsoft 365 E3, or available standalone, with P2 adding risk-based
-    conditional access for teams that need it. Since you're already managing
-    identity through Microsoft, this avoids adding a second vendor into the mix.
-  </p>
-  <p><a href="https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-mfa">See Microsoft Entra MFA</a></p>
+  <div class="tool-card">
+    <h2>Microsoft Entra MFA</h2>
+    <span class="price-chip">~$6&ndash;9/user/month</span>
+    <p>
+      If your team already runs on Microsoft 365, Entra MFA (formerly Azure AD
+      MFA) is usually the path of least resistance — Entra ID P1 is included in
+      Microsoft 365 E3, or available standalone, with P2 adding risk-based
+      conditional access for teams that need it. Since you're already managing
+      identity through Microsoft, this avoids adding a second vendor into the mix.
+    </p>
+    <a class="plain-link" href="https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-mfa">See Microsoft Entra MFA &rarr;</a>
+  </div>
 
-  <h2>YubiKey hardware keys</h2>
-  <p>
-    Push notifications and SMS codes can be phished — an employee can be
-    tricked into approving a fraudulent login. Hardware keys using FIDO2/
-    WebAuthn can't be phished the same way, which is why they're the
-    recommended baseline for admins, finance roles, and anyone with access to
-    sensitive systems, even on a team that uses a simpler method for everyone
-    else. At $50-100 per key, it's a one-time cost rather than a subscription.
-  </p>
-  <p><a href="https://www.yubico.com/products/">See YubiKey pricing</a></p>
+  <div class="tool-card">
+    <h2>YubiKey hardware keys</h2>
+    <span class="price-chip">$50&ndash;100/key</span>
+    <p>
+      Push notifications and SMS codes can be phished — an employee can be
+      tricked into approving a fraudulent login. Hardware keys using FIDO2/
+      WebAuthn can't be phished the same way, which is why they're the
+      recommended baseline for admins, finance roles, and anyone with access to
+      sensitive systems, even on a team that uses a simpler method for everyone
+      else. At $50-100 per key, it's a one-time cost rather than a subscription.
+    </p>
+    <a class="plain-link" href="https://www.yubico.com/products/">See YubiKey pricing &rarr;</a>
+  </div>
 
-  <h2>Which one should you pick?</h2>
-  <p>
-    Very small team, no budget: free authenticator apps for everyone. Growing
-    team that wants admin control without full Microsoft lock-in: Duo.
-    Already on Microsoft 365: Entra MFA. Whatever you choose for the rest of
-    the team, add YubiKeys for admins and finance — the highest-risk accounts
-    are worth the extra step regardless of what everyone else uses.
-  </p>
+  <div class="verdict-box">
+    <h2>Which one should you pick?</h2>
+    <p>
+      Very small team, no budget: free authenticator apps for everyone. Growing
+      team that wants admin control without full Microsoft lock-in: Duo.
+      Already on Microsoft 365: Entra MFA. Whatever you choose for the rest of
+      the team, add YubiKeys for admins and finance — the highest-risk accounts
+      are worth the extra step regardless of what everyone else uses.
+    </p>
+  </div>
 
   <h2>FAQ</h2>
 
-  <h3>Do I need a paid MFA tool, or is a free authenticator app enough?</h3>
-  <p>
-    For a very small team, a free authenticator app covers the core security
-    benefit at $0. Paid tools like Duo or Entra MFA add centralized admin
-    control, device posture checks, and enforced policies across the team —
-    worth it once you're managing MFA for more than a handful of people.
-  </p>
+  <details class="faq-item">
+    <summary>Do I need a paid MFA tool, or is a free authenticator app enough?</summary>
+    <p class="faq-answer">
+      For a very small team, a free authenticator app covers the core security
+      benefit at $0. Paid tools like Duo or Entra MFA add centralized admin
+      control, device posture checks, and enforced policies across the team —
+      worth it once you're managing MFA for more than a handful of people.
+    </p>
+  </details>
 
-  <h3>What is phishing-resistant MFA and do I need it?</h3>
-  <p>
-    SMS codes and push notifications can be phished or socially engineered (a
-    user tricked into approving a fraudulent login). Phishing-resistant MFA —
-    hardware keys like YubiKey using FIDO2/WebAuthn — can't be phished this
-    way. It's worth the extra cost for admins, finance roles, and anyone with
-    access to sensitive systems, even if the rest of the team uses a simpler
-    method.
-  </p>
+  <details class="faq-item">
+    <summary>What is phishing-resistant MFA and do I need it?</summary>
+    <p class="faq-answer">
+      SMS codes and push notifications can be phished or socially engineered (a
+      user tricked into approving a fraudulent login). Phishing-resistant MFA —
+      hardware keys like YubiKey using FIDO2/WebAuthn — can't be phished this
+      way. It's worth the extra cost for admins, finance roles, and anyone with
+      access to sensitive systems, even if the rest of the team uses a simpler
+      method.
+    </p>
+  </details>
 
-  <h3>Should I use Microsoft Entra MFA or a third-party tool like Duo?</h3>
-  <p>
-    If your team is already on Microsoft 365, Entra MFA is often the
-    simplest choice since it's built into identity you're already managing.
-    Duo is a stronger fit for a mixed environment — a team not fully
-    standardized on Microsoft, or one that wants MFA decoupled from a single
-    identity vendor.
-  </p>
+  <details class="faq-item">
+    <summary>Should I use Microsoft Entra MFA or a third-party tool like Duo?</summary>
+    <p class="faq-answer">
+      If your team is already on Microsoft 365, Entra MFA is often the
+      simplest choice since it's built into identity you're already managing.
+      Duo is a stronger fit for a mixed environment — a team not fully
+      standardized on Microsoft, or one that wants MFA decoupled from a single
+      identity vendor.
+    </p>
+  </details>
 
-  <h3>What happens if an employee loses their hardware security key?</h3>
-  <p>
-    This is why every MFA rollout needs backup authentication methods
-    configured per user (a second registered key, a backup code, or a
-    fallback app) before it's needed — plan for lost-key recovery during
-    setup, not after someone is locked out.
-  </p>
+  <details class="faq-item">
+    <summary>What happens if an employee loses their hardware security key?</summary>
+    <p class="faq-answer">
+      This is why every MFA rollout needs backup authentication methods
+      configured per user (a second registered key, a backup code, or a
+      fallback app) before it's needed — plan for lost-key recovery during
+      setup, not after someone is locked out.
+    </p>
+  </details>
 </main>
 
 <footer class="site-footer">

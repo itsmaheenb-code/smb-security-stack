@@ -65,7 +65,7 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="site-title" href="../index.html">The SMB Security Stack</a>
+    <a class="site-title" href="../index.html"><span class="logo-badge">S</span>The SMB Security Stack</a>
     <nav class="site-nav">
       <a href="../about.html">About</a>
       <a href="../disclosure.html">Disclosure</a>
@@ -74,8 +74,9 @@
 </header>
 
 <main>
+  <span class="post-tag tag-endpoint">Endpoint Protection</span>
   <h1>Best Endpoint Protection &amp; Antivirus for Small Business (2026)</h1>
-  <p class="byline">By The SMB Security Stack Editorial Team &middot; Last updated <time datetime="2026-09-21">September 21, 2026</time> &middot; Software comparison</p>
+  <p class="byline">By The SMB Security Stack Editorial Team &middot; Last updated <time datetime="2026-09-21">September 21, 2026</time></p>
 
   <div class="disclosure-note">
     This post contains affiliate links. If you sign up through one, we may earn a
@@ -118,88 +119,103 @@
     </tr>
   </table>
 
-  <h2>Microsoft Defender for Business</h2>
-  <p>
-    If your business already pays for Microsoft 365 Business Premium or E5,
-    check your admin center before buying anything else — Defender for
-    Business is likely already included. Standalone, it runs around $3/user/
-    month and covers up to five devices per user, combining prevention with
-    EDR-level detection and automated investigation.
-  </p>
-  <p><a href="https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business">See Microsoft Defender for Business</a></p>
+  <div class="tool-card">
+    <h2>Microsoft Defender for Business</h2>
+    <span class="price-chip">~$3/user/month</span>
+    <p>
+      If your business already pays for Microsoft 365 Business Premium or E5,
+      check your admin center before buying anything else — Defender for
+      Business is likely already included. Standalone, it runs around $3/user/
+      month and covers up to five devices per user, combining prevention with
+      EDR-level detection and automated investigation.
+    </p>
+    <a class="plain-link" href="https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business">See Microsoft Defender for Business &rarr;</a>
+  </div>
 
-  <h2>CrowdStrike Falcon</h2>
-  <p>
-    CrowdStrike is a security-industry standard for EDR, consistently ranking
-    near the top of independent detection tests. It's priced in tiers (Go,
-    Pro, Enterprise) that scale with how much investigation and response
-    capability you need — reported per-user and per-device figures vary
-    noticeably across sources, so treat any number you see, including ours
-    above, as a starting point and get a current quote before deciding. It's
-    worth strongly considering if a cyber insurance policy, customer
-    security questionnaire, or compliance framework specifically requires EDR.
-  </p>
-  <p>
+  <div class="tool-card">
+    <h2>CrowdStrike Falcon</h2>
+    <span class="price-chip">Tiered — verify pricing</span>
+    <p>
+      CrowdStrike is a security-industry standard for EDR, consistently ranking
+      near the top of independent detection tests. It's priced in tiers (Go,
+      Pro, Enterprise) that scale with how much investigation and response
+      capability you need — reported per-user and per-device figures vary
+      noticeably across sources, so treat any number you see, including ours
+      above, as a starting point and get a current quote before deciding. It's
+      worth strongly considering if a cyber insurance policy, customer
+      security questionnaire, or compliance framework specifically requires EDR.
+    </p>
     <a class="cta" href="https://www.crowdstrike.com/en-us/products/bundles/falcon-go/" rel="nofollow sponsored"><!-- AFF:crowdstrike -->Check CrowdStrike Falcon Go pricing</a>
-  </p>
+  </div>
 
-  <h2>Malwarebytes for Teams / ThreatDown</h2>
-  <p>
-    Malwarebytes built its reputation on cleanup and remediation rather than
-    just prevention, and its business tier (rebranded ThreatDown for larger
-    fleets) is a straightforward, lower-cost EPP option — roughly $50/endpoint/
-    year for teams under 20 devices. It's a reasonable default for a small
-    team that isn't on Microsoft 365 and doesn't have a specific EDR requirement.
-  </p>
-  <p>
+  <div class="tool-card">
+    <h2>Malwarebytes for Teams / ThreatDown</h2>
+    <span class="price-chip">~$50/endpoint/year</span>
+    <p>
+      Malwarebytes built its reputation on cleanup and remediation rather than
+      just prevention, and its business tier (rebranded ThreatDown for larger
+      fleets) is a straightforward, lower-cost EPP option — roughly $50/endpoint/
+      year for teams under 20 devices. It's a reasonable default for a small
+      team that isn't on Microsoft 365 and doesn't have a specific EDR requirement.
+    </p>
     <a class="cta" href="https://www.malwarebytes.com/business" rel="nofollow sponsored"><!-- AFF:malwarebytes -->Check Malwarebytes for Teams pricing</a>
-  </p>
+  </div>
 
-  <h2>Which one should you pick?</h2>
-  <p>
-    Already on Microsoft 365 Business Premium or E5: use Defender for
-    Business, it's likely already included. Need certified EDR for
-    insurance/compliance/a customer requirement: CrowdStrike Falcon. Just want
-    solid, affordable prevention with no Microsoft 365 subscription: Malwarebytes.
-  </p>
+  <div class="verdict-box">
+    <h2>Which one should you pick?</h2>
+    <p>
+      Already on Microsoft 365 Business Premium or E5: use Defender for
+      Business, it's likely already included. Need certified EDR for
+      insurance/compliance/a customer requirement: CrowdStrike Falcon. Just want
+      solid, affordable prevention with no Microsoft 365 subscription: Malwarebytes.
+    </p>
+  </div>
 
   <h2>FAQ</h2>
 
-  <h3>What's the difference between EPP, EDR, and MDR?</h3>
-  <p>
-    EPP (endpoint protection platform) is traditional antivirus — it blocks
-    known malware before it runs. EDR (endpoint detection and response) adds
-    behavioral monitoring to catch threats that get past prevention, plus
-    tools to investigate and respond. MDR (managed detection and response)
-    adds a human team that watches those EDR alerts for you, for businesses
-    without in-house security staff.
-  </p>
+  <details class="faq-item">
+    <summary>What's the difference between EPP, EDR, and MDR?</summary>
+    <p class="faq-answer">
+      EPP (endpoint protection platform) is traditional antivirus — it blocks
+      known malware before it runs. EDR (endpoint detection and response) adds
+      behavioral monitoring to catch threats that get past prevention, plus
+      tools to investigate and respond. MDR (managed detection and response)
+      adds a human team that watches those EDR alerts for you, for businesses
+      without in-house security staff.
+    </p>
+  </details>
 
-  <h3>Do I already have endpoint protection if I use Microsoft 365?</h3>
-  <p>
-    If you're on Microsoft 365 Business Premium or E5, Microsoft Defender for
-    Business is already included at no extra cost — check your current plan
-    before paying for a separate tool. Lower Microsoft 365 tiers don't
-    include it and would need it added separately.
-  </p>
+  <details class="faq-item">
+    <summary>Do I already have endpoint protection if I use Microsoft 365?</summary>
+    <p class="faq-answer">
+      If you're on Microsoft 365 Business Premium or E5, Microsoft Defender for
+      Business is already included at no extra cost — check your current plan
+      before paying for a separate tool. Lower Microsoft 365 tiers don't
+      include it and would need it added separately.
+    </p>
+  </details>
 
-  <h3>Is CrowdStrike overkill for a 10-person business?</h3>
-  <p>
-    Often, yes, unless you're specifically required to have EDR for a cyber
-    insurance policy, a customer security questionnaire, or a compliance
-    requirement. For most small teams without that specific requirement,
-    Microsoft Defender for Business or Malwarebytes covers the practical risk
-    at a fraction of the cost.
-  </p>
+  <details class="faq-item">
+    <summary>Is CrowdStrike overkill for a 10-person business?</summary>
+    <p class="faq-answer">
+      Often, yes, unless you're specifically required to have EDR for a cyber
+      insurance policy, a customer security questionnaire, or a compliance
+      requirement. For most small teams without that specific requirement,
+      Microsoft Defender for Business or Malwarebytes covers the practical risk
+      at a fraction of the cost.
+    </p>
+  </details>
 
-  <h3>Why do endpoint security prices vary so much between sources?</h3>
-  <p>
-    Vendors in this space price by tier (EPP vs. EDR vs. MDR), by commitment
-    length, and often negotiate per-deal for business customers — so publicly
-    quoted numbers vary more than in simpler software categories. Always
-    confirm current pricing directly with the vendor for your team size
-    before deciding.
-  </p>
+  <details class="faq-item">
+    <summary>Why do endpoint security prices vary so much between sources?</summary>
+    <p class="faq-answer">
+      Vendors in this space price by tier (EPP vs. EDR vs. MDR), by commitment
+      length, and often negotiate per-deal for business customers — so publicly
+      quoted numbers vary more than in simpler software categories. Always
+      confirm current pricing directly with the vendor for your team size
+      before deciding.
+    </p>
+  </details>
 </main>
 
 <footer class="site-footer">
