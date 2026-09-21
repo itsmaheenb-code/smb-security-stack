@@ -14,6 +14,8 @@
   --purple-soft: #eee9fb;
   --navy: #2a3a5c;
   --navy-soft: #e8ecf4;
+  --blue: #1c5fa8;
+  --blue-soft: #e5f0fd;
   --card: #ffffff;
   --border: #eae3d5;
   --shadow: 0 1px 2px rgba(32, 28, 22, 0.04), 0 8px 24px rgba(32, 28, 22, 0.06);
@@ -336,6 +338,7 @@ tbody tr:hover { background: #fdfaf5; }
 .tag-backup { background: var(--teal-soft); color: var(--teal); }
 .tag-endpoint { background: var(--accent-soft); color: var(--accent-dark); }
 .tag-mfa { background: #fdf0d8; color: #9a6b0a; }
+.tag-email { background: var(--blue-soft); color: var(--blue); }
 
 .post-card .post-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
