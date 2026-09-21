@@ -1,14 +1,19 @@
 # The SMB Security Stack
 
+**Live at: https://itsmaheenb-code.github.io/smb-security-stack/**
+
 An affiliate content site reviewing/comparing security and backup software for
 small businesses and remote teams (password managers, business VPNs, cloud
 backup, and related tools). Plain HTML/CSS, no build step, no dependencies —
-deploys on any free static host with zero configuration.
+hosted free on GitHub Pages, auto-deploys on every push to `main`.
 
 Working name — rename freely (site title appears in every `.html` file's
 `<title>`, `<header>`, and footer; find/replace "The SMB Security Stack" and
 `smbsecuritystack.example` once you've picked something final and checked the
-domain is available).
+domain is available). Note: if you rename the GitHub repo itself, the live
+URL changes too, and every `<link rel="canonical">`, `sitemap.xml`, and
+`robots.txt` entry needs updating to match (grep for
+`itsmaheenb-code.github.io/smb-security-stack` to find them all).
 
 ## Preview it locally
 
@@ -22,25 +27,22 @@ npx serve .
 (If `npx` isn't available, opening the HTML files directly works fine too —
 there's no build step to run.)
 
-## Deploy it for free (~10 minutes, no domain needed to start)
+## Deployment (done)
 
-1. Create a free [GitHub](https://github.com/signup) account if you don't have one.
-2. Create a new empty repo, then from this folder:
-   ```bash
-   git init
-   git add -A
-   git commit -m "Initial site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/smb-security-stack.git
-   git push -u origin main
-   ```
-3. Sign up for [Cloudflare Pages](https://pages.cloudflare.com/) (free) or
-   [Vercel](https://vercel.com/) (free) and connect your GitHub repo.
-   - Build command: none / leave blank
-   - Output directory: `/` (root)
-4. You'll get a free `*.pages.dev` or `*.vercel.app` URL immediately. A real
-   domain (~$10-12/year) is an easy upgrade later once the site has some
-   content and traffic — not required to launch.
+Live on GitHub Pages at https://itsmaheenb-code.github.io/smb-security-stack/,
+serving directly from the `main` branch, root path — no build step, no
+separate hosting account. Every `git push` to `main` triggers a new Pages
+build automatically (usually live within ~30-60 seconds).
+
+To trigger a rebuild manually if needed:
+```bash
+gh api -X POST repos/itsmaheenb-code/smb-security-stack/pages/builds
+```
+
+A real domain (~$10-12/year) is an optional upgrade later once the site has
+traffic — not required. If you add one, update the canonical/sitemap/robots.txt
+URLs (see the note above) and add it under the repo's Settings → Pages →
+Custom domain.
 
 ## Swapping in real affiliate links
 
@@ -74,16 +76,11 @@ topic backlog so new posts stay consistent with the first three.
 
 ## Automating ongoing content
 
-Once this is pushed to GitHub with hosting connected (auto-deploys on push),
-you can ask Claude Code to set up a recurring scheduled task that:
-
-1. Picks the next topic from `CONTENT-PLAYBOOK.md`'s backlog
-2. Researches it and writes a new post following the playbook
-3. Wires it into `index.html` and `sitemap.xml`
-4. Commits and pushes — which auto-deploys
-
-That's a good next step once the first few posts are live and you've
-confirmed the deploy pipeline works end to end.
+The site is live and auto-deploys on push, so this is ready to set up: a
+recurring scheduled task that picks the next topic from
+`CONTENT-PLAYBOOK.md`'s backlog, researches it, writes a new post following
+the playbook (including the GEO/AEO markup), wires it into `index.html` and
+`sitemap.xml`, and commits + pushes — which auto-deploys live within a minute.
 
 ## Legal basics already handled
 
