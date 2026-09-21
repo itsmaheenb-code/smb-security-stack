@@ -1,13 +1,13 @@
-# The Indie Author Stack
+# The SMB Security Stack
 
-An affiliate content site reviewing/comparing software and services for
-self-published authors (editing, formatting, keyword research, distribution,
-ads). Plain HTML/CSS, no build step, no dependencies — deploys on any free
-static host with zero configuration.
+An affiliate content site reviewing/comparing security and backup software for
+small businesses and remote teams (password managers, business VPNs, cloud
+backup, and related tools). Plain HTML/CSS, no build step, no dependencies —
+deploys on any free static host with zero configuration.
 
 Working name — rename freely (site title appears in every `.html` file's
-`<title>`, `<header>`, and footer; find/replace "The Indie Author Stack" and
-`indieauthorstack.example` once you've picked something final and checked the
+`<title>`, `<header>`, and footer; find/replace "The SMB Security Stack" and
+`smbsecuritystack.example` once you've picked something final and checked the
 domain is available).
 
 ## Preview it locally
@@ -31,7 +31,7 @@ there's no build step to run.)
    git add -A
    git commit -m "Initial site"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/indie-author-stack.git
+   git remote add origin https://github.com/YOUR-USERNAME/smb-security-stack.git
    git push -u origin main
    ```
 3. Sign up for [Cloudflare Pages](https://pages.cloudflare.com/) (free) or
@@ -48,20 +48,20 @@ Every link that should eventually be an affiliate link is marked with an
 HTML comment right before it, like:
 
 ```html
-<a class="cta" href="https://www.atticus.io/" rel="nofollow sponsored"><!-- AFF:atticus -->Check current Atticus pricing</a>
+<a class="cta" href="https://1password.com/business" rel="nofollow sponsored"><!-- AFF:1password -->Check 1Password Business pricing</a>
 ```
 
 Right now these point at each tool's real (non-affiliate) homepage, so the
 site is fully functional and useful before you've been approved for any
 affiliate program. To activate monetization:
 
-1. Sign up for the relevant affiliate program yourself (I can't create
-   accounts on your behalf — this needs your name/tax info):
-   - [Amazon Associates](https://affiliate-program.amazon.com/) — broad catalog, low commission (1-10%), useful as a fallback/general link
-   - [Publisher Rocket affiliate program](https://publisherrocket.com/affiliate-program/) — ~$60/sale, 90-day cookie
-   - [ProWritingAid affiliates](https://prowritingaid.com/affiliates) — ~$20/sale + $0.25/signup, 30-day cookie
-   - [Grammarly affiliates](https://www.grammarly.com/affiliates) — ~$20/premium upgrade + $0.20/signup, 90-day cookie
-   - Atticus, Vellum, Reedsy, Draft2Digital, AutoCrit — check each site's footer for an affiliate/partner program link; terms above were current as of research but verify before relying on them
+1. Sign up for the relevant affiliate/partner program yourself (I can't
+   create accounts on your behalf — this needs your name/tax info):
+   - [1Password Partners](https://1password.com/partners) — business password manager
+   - [NordPass affiliate program](https://nordpass.com/affiliate-program/) — reported up to 50%+ recurring on some Nord programs; verify current terms
+   - [NordLayer affiliates](https://nordlayer.com/affiliates/) — reported up to 50% commission, 30-day cookie
+   - [Backblaze affiliate program](https://www.backblaze.com/) — check footer for current partner program link
+   - Bitwarden, Tailscale, Check Point, iDrive, Acronis, CrashPlan — check each site's footer for an affiliate/partner program link; terms in the posts were current as of research but verify before relying on them
 2. Once approved, replace the `href` on each marked link with your unique
    affiliate URL, and remove the `<!-- AFF:... -->` comment.
 3. Keep the `rel="nofollow sponsored"` attribute — required by Google's
@@ -93,6 +93,5 @@ confirmed the deploy pipeline works end to end.
   not just in the footer — required for FTC compliance, not just nice-to-have.
 
 Still worth doing before real traffic: replace the placeholder contact email
-in `disclosure.html`, and double check your specific affiliate programs'
-disclosure requirements (some, like Amazon Associates, have their own
-required wording in addition to the FTC disclosure).
+in `disclosure.html`, and double check each affiliate program's specific
+disclosure requirements in addition to the general FTC disclosure.
