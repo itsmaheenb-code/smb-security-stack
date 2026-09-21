@@ -29,9 +29,31 @@ can produce a consistent post from it.
    real (non-affiliate) homepage in the meantime. That way the site is fully
    useful and linkable before any affiliate program is approved. See
    "Swapping in real affiliate links" in README.md.
-6. **Add the post to `index.html`** (top of `.post-list`, most recent first)
+6. **Add AI-answer-engine (GEO/AEO) markup** — required on every post, not optional:
+   - `<meta name="author" content="The SMB Security Stack Editorial Team">` and
+     a `<link rel="canonical" href="https://REPLACE-WITH-YOUR-DOMAIN/posts/<slug>.html">`
+     in `<head>` (swap in the real domain once one exists — grep the repo for
+     `REPLACE-WITH-YOUR-DOMAIN` to find every placeholder that needs it).
+   - An `Article` JSON-LD block (`headline`, `description`, `author`,
+     `publisher`, `datePublished`, `dateModified`) — copy the pattern from
+     any existing post.
+   - A visible byline with a real `<time datetime="YYYY-MM-DD">` element, not
+     just prose text — e.g. `By The SMB Security Stack Editorial Team ·
+     Last updated <time datetime="2026-09-21">September 21, 2026</time>`.
+   - An `FAQPage` JSON-LD block **plus** a matching visible `<h2>FAQ</h2>`
+     section with 3-4 `<h3>` questions and short direct-answer paragraphs.
+     Questions should mirror how someone would actually type or speak the
+     query to an AI assistant ("Do I need X if I already have Y?"), not
+     generic marketing headers. The JSON-LD text and the visible text must
+     match — don't put different content in the schema than what's on the page.
+   - Don't add `Review` or `AggregateRating` schema — that requires genuine
+     ratings/reviews we don't have, and fabricating them is exactly the kind
+     of fake-review structured data Google and AI engines actively penalize.
+     `Article` + `FAQPage` is the honest, defensible set of schema for this
+     site.
+7. **Add the post to `index.html`** (top of `.post-list`, most recent first)
    and to `sitemap.xml`.
-7. **Commit and push**: `git add -A && git commit -m "Add post: <title>"`.
+8. **Commit and push**: `git add -A && git commit -m "Add post: <title>"`.
    If a remote + hosting is connected, this auto-deploys — nothing else needed.
 
 ## Topic backlog (rough priority order)
