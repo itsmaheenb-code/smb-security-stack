@@ -74,7 +74,6 @@ can produce a consistent post from it.
 
 ## Topic backlog (rough priority order)
 
-- Best encrypted file-sharing/cloud storage for sensitive documents (Tresorit vs. Sync.com vs. standard Google Drive/OneDrive)
 - Best single sign-on (SSO) providers for small business (Okta vs. JumpCloud vs. Google/Microsoft native SSO)
 - Best business-grade firewall/router hardware for a small office
 - Best compliance-readiness tools for small business (SOC 2 prep platforms like Vanta/Drata — worth it pre-Series A vs. DIY)
